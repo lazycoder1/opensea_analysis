@@ -15,7 +15,7 @@ url = "https://api.etherscan.io/api?module=account&"\
     "apikey=RY1QF8U67EGBIFGPJDKDIMQZ3ZJDJHGYSB"
 transaction_list = []
 
-for i in range(1,10):
+for i in range(1,100):
     print('page %d' %(i))
     new_url = url.replace('PAGENO',str(i))
     time.sleep(0.2)
@@ -56,9 +56,3 @@ for txn in transaction_list:
     csv_writer.writerow(txn.values())
  
 data_file.close()
-
-
-
-
-
-
